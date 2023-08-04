@@ -22,18 +22,18 @@ option(ENABLE_EXAMPLES "Enable example applications" OFF)
 add_feature_info(ENABLE_EXAMPLES ENABLE_EXAMPLES "Enable example application (can be broken!)")
 option(ENABLE_DEBUG_BLIT "Enable debugging blitter" OFF)
 add_feature_info(ENABLE_DEBUG_BLIT ENABLE_DEBUG_BLIT "Enable debugging blitter")
-option(ENABLE_OPENGL "Enable OpenGL support" ON)
+option(ENABLE_OPENGL "Enable OpenGL support" OFF)
 add_feature_info(ENABLE_OPENGL ENABLE_OPENGL "Enable OpenGL support")
 
-set(ENABLE_SDL2 "BUNDLED" CACHE STRING "Enable SDL2 (ON/BUNDLED, default BUNDLED)")
+set(ENABLE_SDL2 "ON" CACHE STRING "Enable SDL2 (ON/BUNDLED, default BUNDLED)")
 set_property(CACHE ENABLE_SDL2 PROPERTY STRINGS "ON" "BUNDLED")
 add_feature_info(ENABLE_SDL2 ENABLE_SOUND "Enable SDL2 support")
 
-set(ENABLE_SOUND "BUNDLED" CACHE STRING "Enable sound support (requires SDL2_mixer) (ON/BUNDLED/OFF, default BUNDLED)")
+set(ENABLE_SOUND "ON" CACHE STRING "Enable sound support (requires SDL2_mixer) (ON/BUNDLED/OFF, default BUNDLED)")
 set_property(CACHE ENABLE_SOUND PROPERTY STRINGS "ON" "BUNDLED" "OFF")
 add_feature_info(ENABLE_SOUND ENABLE_SOUND "Enable sound support (requires SDL2_mixer)")
 
-set(ENABLE_FLUIDSYNTH "BUNDLED" CACHE STRING "Enable FluidSynth MIDI support (ON/BUNDLED/OFF, default BUNDLED)")
+set(ENABLE_FLUIDSYNTH "ON" CACHE STRING "Enable FluidSynth MIDI support (ON/BUNDLED/OFF, default BUNDLED)")
 set_property(CACHE ENABLE_FLUIDSYNTH PROPERTY STRINGS "ON" "BUNDLED" "OFF")
 add_feature_info(ENABLE_FLUIDSYNTH ENABLE_FLUIDSYNTH "Enable FluidSynth MIDI support")
 
